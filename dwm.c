@@ -2104,7 +2104,7 @@ updatestatus(void)
 {
 	if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext))) {
 		strcpy(stext, "dwm-"VERSION);
-		statusw = TEXTW(stext) - lrpad + 2;
+		statusw = TEXTW(stext) - lrpad + 30;
 	} else {
 		char *text, *s, ch;
 		statusw = 0;
@@ -2117,7 +2117,7 @@ updatestatus(void)
 				text = s + 1;
 			}
 		}
-		statusw += TEXTW(text) - lrpad + 2;
+		statusw += TEXTW(text) - lrpad + 30;
 	}
 	drawbar(selmon);
 }
