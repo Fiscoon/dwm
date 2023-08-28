@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-#include "themes/cyber.h"
+#include "themes/kanagawa.h"
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
