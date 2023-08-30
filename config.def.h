@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-#include "themes/kanagawa.h"
+#include "themes/cat.h"
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -13,8 +13,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
-static const char *fonts[]          = { "Source Code Pro:size=10" };
-static const char dmenufont[]       = "Source Code Pro:size=10";
+static const char *fonts[]          = { "Source Code Pro:Medium:pixelsize=11:antialias=true"};
+static const char dmenufont[]       = "Source Code Pro:Medium:pixelsize=12:antialias=true";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -23,7 +23,7 @@ static const char col_gray4[]       = "#eeeeee";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm]   = { col_foreground, col_background, col_background },
-	[SchemeSel]    = { col_yellow, col_background, col_blue },
+	[SchemeSel]    = { col_yellow, col_background, col_white },
 };
 
 static const char *const autostart[] = {
