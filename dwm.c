@@ -2114,12 +2114,12 @@ updatestatus(void)
 			if ((unsigned char)(*s) < ' ') {
 				ch = *s;
 				*s = '\0';
-				statusw += TEXTW(text) - lrpad;
+				statusw += TEXTW(text) - lrpad + 2;
 				*s = ch;
 				text = s + 1;
 			}
 		}
-		statusw += TEXTW(text) - lrpad;
+		statusw += TEXTW(text) - lrpad + 2;
 	}
 	drawbar(selmon);
 }
