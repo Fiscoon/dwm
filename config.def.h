@@ -30,7 +30,7 @@ static const char *const autostart[] = {
         "st", NULL,
         //"picom", "--config", "/home/fisk/.local/picom.conf", NULL,
 	//"xwallpaper", "--center", "/home/fisk/.local/wallpaper.jpg", NULL,
-        "dwmblocks", NULL,
+        //"dwmblocks", NULL,
         NULL /* terminate */
 };
 
