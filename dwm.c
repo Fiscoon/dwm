@@ -1315,8 +1315,7 @@ propertynotify(XEvent *e)
 	XPropertyEvent *ev = &e->xproperty;
 
 	if ((ev->window == root) && (ev->atom == XA_WM_NAME))
-		//updatestatus();
-		return; /* ignore this for now, not interested in status */
+		updatestatus();
 	else if (ev->state == PropertyDelete)
 		return; /* ignore */
 	else if ((c = wintoclient(ev->window))) {
@@ -1710,7 +1709,7 @@ setup(void)
 		scheme[i] = drw_scm_create(drw, colors[i], 3);
 	/* init bars */
 	updatebars();
-	// updatestatus(); /* ignore this for now, not interested in status */
+	updatestatus();
 	/* supporting window for NetWMCheck */
 	wmcheckwin = XCreateSimpleWindow(dpy, root, 0, 0, 1, 1, 0, 0, 0);
 	XChangeProperty(dpy, wmcheckwin, netatom[NetWMCheck], XA_WINDOW, 32,
