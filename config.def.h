@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-#include "themes/cat.h"
+#include "themes/homy.h"
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
