@@ -28,8 +28,6 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
         "st", NULL,
-        //"picom", "--config", "/home/fisk/.local/picom.conf", NULL,
-	//"xwallpaper", "--center", "/home/fisk/.local/wallpaper.jpg", NULL,
         "dwmblocks", NULL,
         NULL /* terminate */
 };
@@ -98,10 +96,12 @@ static const char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_b,      spawn,          SHCMD("xdotool type --delay 0 $(cat $HOME/.local/bookmarks.txt | dmenu -l 30 | cut -d ' ' -f 1)") },
+    { MODKEY,                       XK_w,      spawn,          SHCMD("surf -z 1.3 https://search.12412636.xyz/") },       
+
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	// { MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_b,      spawn,          SHCMD("xdotool type --delay 0 $(cat $HOME/.local/bookmarks.txt | dmenu -l 30 | cut -d ' ' -f 1)") },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
